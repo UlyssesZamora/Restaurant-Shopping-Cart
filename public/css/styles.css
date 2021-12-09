@@ -1,0 +1,241 @@
+#prior {
+  color: black !important;
+  font-size: 20px;
+}
+#prior:hover {
+  background-color: white;
+  font-size:22px;
+  transition: .7s;
+} 
+.nav {
+  position: fixed;
+  width: 100%; 
+  top: 0%;
+  z-index:2;
+}
+
+.navbar {
+  background-color:black;
+  width: 100%; 
+  padding: 5px;
+}
+
+.navbar img {
+  width: 80px;
+  height: 80px;
+  margin-top: -5px;
+  margin-left: 200px;
+  position: absolute;
+}
+
+.navbar a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  background-color: #292b2c;
+}
+
+h1 {
+  text-align: center;
+  display: inline;
+  color: white;
+}
+
+.logolink:hover {
+  text-decoration: none; 
+  background-color: transparent;
+  border: 0; 
+}
+
+ #signUp {
+  margin-left: -65px;
+}
+
+#login {
+  margin-left: 85px;
+}
+
+#cart {
+  float: right;
+  margin-left: 15px;
+}
+
+#topHeader {
+  background-color: #FF5733;
+}
+
+.container {
+margin-top: 20px;
+padding-bottom: 20px;
+z-index: 1;
+}
+
+.card {
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.bottomNav {
+  text-align: center;
+  font-size: 20pt;
+}
+
+.linkStyle {
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-radius: 99px;
+  border-top-left-radius: 99px;
+  border-top-right-radius: 99px;
+  border-bottom-right-radius: 99px;
+  border-bottom-left-radius: 99px;
+  display: block;
+  min-width: 2.25em;
+  text-decoration: none;
+  color: black;
+}
+
+.linkStyle:hover {
+  background-color: #f2875b;
+  transition: .7s;
+  color: black;
+}
+
+footer {
+  background-color: #292b2c;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  padding: 5px;
+}
+
+#dfooter {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+#menuLayout {
+  padding-top: 75px;
+}
+
+#loginCard {
+  margin: 0 auto; /* Added */
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cardContain {
+  padding-top: 80px;
+}
+
+#errMessage {
+  text-align: center;
+  display: block;
+  color: red;
+  font-size: 18pt;
+}
+
+#greeting {
+  color: white;
+  font-size: 20px;
+}
+
+.dropdown {
+  float: left;
+}
+
+.dropdown .dropbtn {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+figure {
+   text-align: center;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #292b2c;
+}
+
+.dropdown-content {
+  display: none;
+  width: 600%;
+  height: 525%;
+  padding: 15px;
+  position: absolute;
+  background-color: #292b2c;
+  left: -25;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  visibility: visible;
+}
+
+.selections{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.selections > div {
+  margin: 5px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+#about {
+  background-image: url("/img/pho.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#photoflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    width: 300px;
+    padding-right: 30px;
+}
+
+#aboutHead {
+  display: block;
+  text-align: center;
+  color: black;
+}
+
+.phoCaption {
+    padding-top: 10px;
+    font-size: 20pt;
+    font-weight: bold;
+    color: black;
+}
+
+#desc {
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+  color: black;
+}

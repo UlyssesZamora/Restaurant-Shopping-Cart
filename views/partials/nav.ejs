@@ -1,0 +1,117 @@
+<div class = "nav">
+<div class = "navbar">
+      <a class = "logoLink" href = "/" style="background-color: transparent;"
+><h1>Noodle 
+      Bar</h1></a>
+      <img src = "/img/noodle.png">
+      <div class="dropdown">
+    <button class="dropbtn">Order</button>
+      <div class="dropdown-content">
+       <div class = "selections">
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "1">
+        <input type = "hidden" name = "end" value = "8">
+        <figure>            
+              <input type = "image" id = "app" src = "/img/appetizers.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Appetizers</figcaption>
+            </figure>
+        </form>
+        </div>
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "9">
+        <input type = "hidden" name = "end" value = "24">
+        <figure>              
+              <input type = "image" src = "/img/rice.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Rice</figcaption>
+            </figure>
+        </form>
+        </div>
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "25">
+        <input type = "hidden" name = "end" value = "32">
+        <figure>              
+              <input type = "image" src = "/img/noodles.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Noodles</figcaption>
+            </figure>
+        </form>
+        </div>
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "33">
+        <input type = "hidden" name = "end" value = "40">
+        <figure>              
+              <input type = "image" src = "/img/soup.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Soup</figcaption>
+            </figure>
+        </form>
+        </div>
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "41">
+        <input type = "hidden" name = "end" value = "48">
+        <figure>              
+              <input type = "image" src = "/img/specialty.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Specials</figcaption>
+            </figure>
+        </form>
+        </div>
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "49">
+        <input type = "hidden" name = "end" value = "58">
+        <figure>              
+              <input type = "image" src = "/img/veggie.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Vegetarian</figcaption>
+            </figure>
+        </form>
+        </div>
+
+        <div>
+        <form action = "/order/selection">
+        <input type = "hidden" name = "init" value = "59">
+        <input type = "hidden" name = "end" value = "67">
+        <figure>              
+              <input type = "image" src = "/img/drink.jpg" style = "width:100px; height:100px;">
+              <figcaption style = "color:white">Drinks</figcaption>
+            </figure>
+        </form>
+        </div>
+      </div>
+
+      </div>
+      </div>
+      <a href = "/about">About Us</a>
+      <button onclick = "location.href = '/cart'" type="button" id= "cart" class="btn btn-primary"><i class="fa fa-shopping-bag"></i> Cart</button>
+      <% if (myVar == false) { %>
+        <button type="button" id="login" class="btn btn-primary"><i class="fa fa-fw fa-user"></i>Log in</button>
+        <button type="button" id="signUp" class="btn btn-primary">Sign up</button>
+      <% }else{ %>
+     <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Welcome, <%= name %>
+  </button>
+  <% if (myVar == false) { %>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li ><a class="dropdown-item" id="prior"href="/user/edit?customerId=<%=1%>">Edit Account</a></li>
+    <li><a class="dropdown-item" id="prior" href="/logout">Logout</a></li>
+  </ul>
+</div>
+<% } else { %>
+ <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li ><a class="dropdown-item" id="prior"href="/user/edit?customerId=<%=customer%>">Edit Account</a></li>
+    <li><a class="dropdown-item" id="prior" href="/logout">Logout</a></li>
+  </ul>
+</div>
+<% } %>
+<% } %>
+</div>
+</div>

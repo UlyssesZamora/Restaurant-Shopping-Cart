@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home Page</title>
+  
+  <%-include("partials/headerLinks.ejs")%>
+  
+</head>
+<body>
+
+  <%-include("partials/nav.ejs")%>
+  
+    
+  <div class="container">
+    <div class="row" id="menuLayout">
+  <%for (let i = 42; i<=55; i++) {%>
+  <div class="col-lg-4 mb-4">
+    <div class="card h-100" style="width: 18rem;">
+      <div class="card-body">
+      
+      <% if (myVar == false) { %>
+        <h5 class="card-title"> <%=menuItems[i].foodName %> </h5>
+          <p class="card-text"> Price: $<%=menuItems[i].price %></p>
+         <p class="card-text"><%=menuItems[i].description %></p>
+          <form action = "/order/new" method = "POST">
+            <button class="btn btn-primary">Add to Cart</button>
+          </form>
+        <% }
+        
+        else{ %>
+          <form action = "/order/new" method = "POST">
+          <input type = "hidden" name="foodName" value = "<%=menuItems[i].foodName%>">
+          <input type = "hidden" name="price" value = "<%=menuItems[i].price%>">
+          <input type = "hidden" name="customerId" value = "<%=customer%>">
+          <h5 class="card-title"> <%=menuItems[i].foodName %> </h5>
+          <p class="card-text"> Price: $<%=menuItems[i].price %></p>
+         <p class="card-text"><%=menuItems[i].description %></p>
+         <button class="btn btn-primary">Add to Cart</button>
+         </form>
+        <%}%>
+        
+      </div>
+    </div>
+  </div>
+  <%}%>
+  </div>
+
+  <div class="bottomNav">
+    <ul>
+    <li>
+      <a class="linkStyle"href="/">1</a>
+      </li>
+      <li>
+      <a class="linkStyle"href="/page2">2</a>
+      </li>
+      <li>
+      <a class="linkStyle"href="/page3">3</a>
+      </li>
+      <li>
+      <a class="linkStyle"href="/page4">4</a>
+      </li>
+      <li>
+      <a class="linkStyle"href="/page5">5</a>
+      </li>
+    <ul>
+  </div>
+  </div>
+
+  <%- include("partials/footer.ejs")%>
+  
+  <script src="/js/script.js"></script>
+  
+</body>
+</html>

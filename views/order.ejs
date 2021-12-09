@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Order</title>
+    <%-include("partials/headerLinks.ejs")%>
+   <link href="/css/order.css" rel="stylesheet" type="text/css"/>
+   
+  </head>
+  <body>
+
+    <%-include("partials/nav.ejs")%>
+      
+
+    <div class = "menuNav">
+    <h3>Menu</h3>
+    <br>
+    <a href = "/order/selection?init=1&end=8">Appetizers</a>
+    <a href = "/order/selection?init=9&end=24">Rice</a>
+    <a href = "/order/selection?init=25&end=32">Noodles</a>
+    <a href = "/order/selection?init=33&end=40">Soup</a>
+    <a href = "/order/selection?init=41&end=48">Specials</a>
+    <a href = "/order/selection?init=49&end=58">Vegetarian</a>
+    <a href = "/order/selection?init=59&end=67">Drinks</a>
+    </div>
+
+  <div class = "menu">
+    <div class="row" id="menuLayout">
+    <%for (let i = 0; i<menuItems.length; i++) {%>
+      <div class="col-lg-4 mb-4">
+      <div class="card h-100" id = "card" style="width: 18rem;">
+      <div class="card-body">
+
+        <form action = "/order/new" method = "POST">
+          <input type = "hidden" name="foodName" value = "<%=menuItems[i].foodName%>">
+          <input type = "hidden" name="price" value = "<%=menuItems[i].price%>">
+          <input type = "hidden" name="init" value = "<%=init%>">
+          <input type = "hidden" name="end" value = "<%=end%>">
+          <h5 class="card-title"> <%=menuItems[i].foodName %> </h5>
+          <p class="card-text"> Price: $<%=menuItems[i].price %></p>
+         <p class="card-text"><%=menuItems[i].description %></p>
+         <button id = "addBtn" class="btn btn-primary">Add to Cart</button>
+      </form>
+
+      </div>
+      </div>
+      </div>
+    <%}%>
+</div>
+</div>
+
+
+    <%- include("partials/footer.ejs")%>
+     <script src="/js/script.js"></script>
+
+  </body>
+  </html>

@@ -1,0 +1,32 @@
+
+.cart-container {  
+  display: block;
+  margin-top: 50px; 
+  margin-bottom: 20px; 
+  height: 300px; 
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px; 
+  position: relative; 
+}
+
+table {
+  margin: 0 auto;
+}
+
+#b {
+  margin: 0 5px;
+}
+
+/* #id {
+  margin-top: 20px;
+  bottom: 0;
+  position: absolute;
+  left:1000px;
+} */

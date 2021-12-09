@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cart Page</title>
+  
+  <%-include("partials/headerLinks.ejs")%>
+  <link href="/css/cart.css" rel="stylesheet" type="text/css"/>
+  
+</head>
+<body>
+  
+<div class = "content">
+  <div class = "cart-container">
+    <div class="card" style="width: 39rem;">
+      <div class="card-body">
+        <div class="jumbotron"><h2>Your Cart</h2></div>
+          <table>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+
+            <%for (let i=0; i < menuItems.length; i++){%>
+                <tr>
+                  <td><%= menuItems[i].foodName%></td>
+                  <td>$<%= menuItems[i].price%></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <form action = "/cart/delete">
+                    <input type = "hidden" name = "cartId" value = "<%=menuItems[i].cartId%>">
+                 <button type="submit" class="btn btn-primary">Remove</button>
+                     </form>
+                  </td>
+                </tr>
+            <%}%>  
+          </table>
+          <br>
+          <hr>
+          <p style = "font-size: 2rem">Total: $<%=total[0].total_price%></p>
+          <button onclick = "location.href = '/order/selection?init=1&end=8'"  type="button" id = "b" class="btn btn-primary btn-lg">Add More Items?</button>
+          <form action = "/cart/clean"><br>
+            <button type="submit" id = "Purchase" class="btn btn-primary btn-lg">Purchase</button>
+          </form>
+      </div>
+    </div>
+   </div>
+ </div>
+
+
+<br>
+
+<%- include("partials/footer.ejs")%>
+
+</body>
+</html>

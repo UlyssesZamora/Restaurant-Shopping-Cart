@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>About Us</title>
+
+    <%-include("partials/headerLinks.ejs")%>
+    
+  </head>
+  <body id="about">
+    <br><br><br><br>
+      <h1 id="aboutHead">About Us</h1>
+      <p id="desc"> We are a group of students from California State University, Monterey Bay
+      in CST-336.</p>
+    <div id='photoflex'>
+
+            <div>
+                <figure>
+                    <img class='photo' src="/img/Ulysses.jpg">
+                    <figcaption class="phoCaption"> Ulysses </figcaption>
+                </figure>
+            </div>
+
+            <div>
+                <figure>
+                    <img class='photo' src="/img/Diego.jpg">
+                    <figcaption class="phoCaption"> Diego </figcaption>
+                </figure>
+            </div>
+
+            <div>
+                <figure>
+                    <img class='photo' src="/img/Tony.png">
+                    <figcaption class="phoCaption"> Tony </figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+    <%-include("partials/nav.ejs")%>
+
+    <%-include("partials/footer.ejs")%>
+
+  </body>
+  </html>
+
+  
